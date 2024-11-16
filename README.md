@@ -26,7 +26,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ### Links
 
 - Solution URL: https://github.com/InvincibleThinker/recipe-card.git
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://recipe-card-alpha.vercel.app/
 
 ## My process
 

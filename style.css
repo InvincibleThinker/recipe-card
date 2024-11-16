@@ -1,0 +1,209 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+
+  --Brown-800: hsl(14, 45%, 36%);
+
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+
+  /* space size */
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem);
+
+  /* font-sizes */
+  --fs--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --fs--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --fs-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --fs-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --fs-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --fs-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --fs-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.body {
+  font-family: "Outfit", serif;
+}
+.main {
+  width: 100%;
+
+  background-color: var(--Stone-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-card {
+  width: 500px;
+  background-color: var(--White);
+  border-radius: 20px;
+  padding: var(--space-s);
+  display: grid;
+  row-gap: 18px;
+  margin: var(--space-3xl);
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.headline {
+  font-size: var(--fs-2);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+.subhead {
+  font-size: var(--fs--2);
+  font-weight: 400;
+}
+
+li {
+  color: rgb(100, 99, 99);
+}
+.prep-time {
+  background-color: var(--Rose-50);
+  font-family: "Outfit", serif;
+  padding: var(--space-s);
+  border-radius: 6px;
+}
+
+.prephead {
+  color: var(--Rose-800);
+  font-weight: 600;
+}
+
+.preplist {
+  padding: var(--space-xs) var(--space-s);
+  font-size: var(--fs--2);
+  font-weight: 400;
+}
+
+.preparation {
+  padding: var(--space-3xs) 0;
+}
+
+.recipe-head {
+  font-family: "Young Serif", serif;
+  font-size: var(--fs-0);
+  font-weight: 400;
+  color: var(--Brown-800);
+}
+
+.ingredeient-list {
+  font-size: var(--fs--2);
+  padding: 0 var(--space-xs);
+  font-family: "Outfit", serif;
+}
+
+.ingredeient-list li {
+  margin-bottom: var(--space-2xs);
+  padding-left: var(--space-s);
+}
+
+::marker {
+  color: var(--Brown-800);
+}
+
+hr {
+  border: 0.3px solid;
+  border-color: rgba(181, 177, 177, 0.378);
+}
+
+.instructions {
+  font-size: 12px;
+  padding: 0 var(--space-2xs);
+  font-family: "Outfit", serif;
+}
+
+.instructions li {
+  margin-bottom: var(--space-2xs);
+  padding-left: var(--space-s);
+}
+
+.instructions li::marker {
+  font-weight: 700;
+}
+.instructions li strong {
+  color: var(--Stone-600);
+}
+
+.nutrition {
+  font-size: var(--fs--2);
+  font-weight: 400;
+  font-family: "Outfit", serif;
+  color: rgb(100, 99, 99);
+}
+
+table {
+  font-family: "Outfit", serif;
+  font-size: var(--fs--2);
+  padding: 0 var(--space-s);
+  color: rgb(100, 99, 99);
+}
+
+th,
+td {
+  padding: var(--space-2xs) 0;
+  border-bottom: 0.3px solid;
+  border-color: rgba(181, 177, 177, 0.378);
+  border-collapse: collapse;
+}
+
+th {
+  color: var(--Brown-800);
+}
+
+.fat {
+  border-bottom: none;
+}
+
+@media screen and (width<= 500px) {
+  .recipe-card {
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .thumbnail {
+    border-radius: 0;
+  }
+
+  h1,
+  p {
+    padding: 0 var(--space-s);
+  }
+
+  .prep-time {
+    margin: var(--space-s);
+  }
+
+  .prephead {
+    padding: 0;
+  }
+  .ingredeient-list {
+    padding: 0 var(--space-l);
+  }
+
+  .instructions {
+    padding: 0 var(--space-l);
+  }
+}
